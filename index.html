@@ -51,7 +51,7 @@ $("stats").innerHTML = [
   [BOARD.totals.protocolsSeen.toLocaleString(), "protocols in the snapshot"],
   [BOARD.totals.tokenless.toLocaleString(), "record no token"],
   [BOARD.totals.derivativesExcluded, "wrapped / staked products excluded"],
-  [money(rows.length ? rows[0].impliedValue : 0), "top implied value"],
+  [money2(rows.length ? rows[0].impliedValue : 0), "top implied value"],
 ].map(([v, l]) => '<div class="stat"><b>' + v + '</b><span>' + l + '</span></div>').join("");
 $("method").innerHTML = "<b>Method.</b> " + BOARD.methodology.map(esc0).join(" ") + " Snapshot: " + esc0(BOARD.snapshot) + ".";
 function esc0(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
